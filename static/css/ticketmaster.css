@@ -1,0 +1,65 @@
+.btn-spotify {
+    background-color: #1DB954;
+    color: white;
+    border-color: #1DB954;
+}
+.btn-spotify:hover {
+    background-color: #1ED760;
+    border-color: #1ED760;
+}
+
+#animated-text-container {
+    position: fixed;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    #animated-text-container {
+        bottom: 40%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #animated-text-container {
+        bottom: 40%;
+    }
+}
+
+
+#animated-text {
+    font-weight: bold;
+    color: #0d6efd;;
+}
+
+.navbar {
+    height: 60px;
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar-text {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item form {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.spotify-embed-container {
+    z-index: 10;
+    margin: 10px;
+}
+
+.card .spotify-embed-container iframe {
+    border-radius: 5px;
+}

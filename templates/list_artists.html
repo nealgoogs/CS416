@@ -1,0 +1,32 @@
+{% extends 'ticketmaster.html' %}
+{% block content %}
+<div class="container mt-4">
+    <h2>Favorite Artists</h2>
+    <a href="{% url 'add_artist' %}" class="btn btn-primary mb-3">Add New Artist</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Artist Name</th>
+                <th>Song Choice</th>
+                <th>Genre</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for artist in artists %}
+            <tr>
+                <td>{{ artist.artist_name }}</td>
+                <td>{{ artist.song_choice }}</td>
+                <td>{{ artist.genre }}</td>
+                <td>
+                    <a href="{% url 'update_artist' artist.pk %}" class="btn btn-sm btn-success">Edit</a>
+                    <a href="{% url 'delete_artist' artist.pk %}" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr><td colspan="4">No artists found.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
